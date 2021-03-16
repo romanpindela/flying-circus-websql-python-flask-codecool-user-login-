@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Circus</title>
+</head>
+<body>
+    <p>Welcom to English school</p>
+    {% if session.email %}
+        <p>Logged in as {{ session.email }}</p>
+    {% else %}
+        <p>Please <a href={{ url_for("login") }}>log in</a></p>
+    {% endif %}
+</body>
+</html>
